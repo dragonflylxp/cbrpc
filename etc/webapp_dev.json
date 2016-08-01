@@ -1,0 +1,49 @@
+{
+    "database":{
+        "memcache": {
+            "session": {
+                "servers": ["192.168.41.101:11211"],
+                "socket_timeout": 4
+            }
+        },
+        "redis": {
+            "main": {
+                "host": "192.168.41.76",
+                "port": 6379,
+                "db": 0,
+                "max_connections": 8
+            },
+            "msgbus": {
+                "host": "192.168.41.76",
+                "port": 6379,
+                "db": 8,
+                "max_connections": 8
+            }
+        },
+    	"mysql":{
+        	"crazy_bet":{
+            	"host":"192.168.50.203",
+            	"db":"crazy_bet",
+            	"charset":"utf8",
+            	"user":"crazy_bet",
+            	"passwd":"crazy_bet",
+            	"cached":12
+        	}
+    	}
+    },
+
+    "backends": {
+		"UserSvr":{
+            "host": "192.168.41.76",
+            "port":8000
+		},		
+		"AccountSvr":{
+            "host": "192.168.41.76",
+			"port":8100
+		},		
+		"OrderSvr":{
+            "host": "192.168.41.76",
+			"port":8200
+		}		
+    }
+}
